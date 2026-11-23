@@ -5,7 +5,7 @@
   const D = window.RPO;
   const page = document.body.dataset.page;
   const $ = selector => document.querySelector(selector);
-  const brand = `<span class="brand-mark" aria-hidden="true">R/</span><span class="brand-name">RETRO POKE<br>OFFLINE <span>2027</span></span>`;
+  const brand = `<img class="brand-image" src="${url('assets/logo.png')}" width="1842" height="854" alt="RETRO Poke OFFLINE 2027">`;
   const navItems = [['home','TOP',''],['ranking','ランキング','ranking/'],['events','オフ会・結果','events/'],['guidelines','ガイドライン・ポイント','guidelines/']];
   $('#siteHeader').innerHTML = `<div class="sample-strip"><strong>DESIGN PREVIEW</strong>掲載中の開催日・大会結果・配点は、すべて架空のサンプルです。</div><header class="header"><div class="wrap header-inner"><a class="brand" href="${url('')}" aria-label="RETRO Poke OFFLINE 2027 トップ">${brand}</a><button class="menu-button" type="button" aria-expanded="false" aria-controls="mainNav">MENU <span aria-hidden="true">＋</span></button><nav id="mainNav" class="nav" aria-label="メインナビゲーション">${navItems.map(([id,label,path]) => `<a href="${url(path)}" ${page === id ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</nav></div></header>`;
   $('#siteFooter').innerHTML = `<footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="${url('')}" aria-label="RETRO Poke OFFLINE 2027 トップ">${brand}</a><nav class="footer-links" aria-label="フッターナビゲーション"><a href="${url('#about')}">ABOUT US</a><a href="${url('#news')}">お知らせ</a><a href="${url('guidelines/')}">ガイドライン</a><a href="${url('#contact')}">お問い合わせ</a></nav></div><div class="footer-bottom"><p>有志によるコミュニティイベントのサンプルサイトです。<br>任天堂・クリーチャーズ・ゲームフリークおよび株式会社ポケモンの公式イベントではありません。</p><p>© 2027 RETRO Poke OFFLINE<br>DESIGN PROTOTYPE / SAMPLE DATA</p></div></div></footer>`;
