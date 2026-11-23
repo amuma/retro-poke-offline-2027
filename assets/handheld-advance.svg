@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="700" viewBox="0 0 620 700" fill="none">
+  <title>RPO ADVANCE — GBA風の横長携帯ゲーム機</title>
+  <defs>
+    <linearGradient id="shell" x1="90" y1="160" x2="525" y2="485" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76728b"/><stop offset=".22" stop-color="#444252"/>
+      <stop offset=".65" stop-color="#24232e"/><stop offset="1" stop-color="#191821"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="535" y1="185" x2="470" y2="505" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9b91af"/><stop offset="1" stop-color="#2c263a"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="194" y1="221" x2="426" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c5dfa5"/><stop offset="1" stop-color="#85a67d"/>
+    </linearGradient>
+    <linearGradient id="button" x1="490" y1="270" x2="535" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c184f4"/><stop offset="1" stop-color="#7742ba"/>
+    </linearGradient>
+    <linearGradient id="shoulder" x1="90" y1="156" x2="120" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8d849b"/><stop offset="1" stop-color="#40384e"/>
+    </linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 3.5H4" stroke="#233d30" stroke-opacity=".15"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-35%" width="170%" height="190%">
+      <feDropShadow dx="8" dy="25" stdDeviation="18" flood-color="#000" flood-opacity=".7"/>
+    </filter>
+    <path id="case" d="M94 174C66 178 46 210 38 249L28 321C22 362 37 407 70 437C91 456 119 470 154 474C205 482 260 474 310 474C360 474 415 482 466 474C501 470 529 456 550 437C583 407 598 362 592 321L582 249C574 210 554 178 526 174C468 160 399 157 310 157C221 157 152 160 94 174Z"/>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Shoulder buttons and the visible lower edge give the wide shell depth. -->
+    <path d="M64 202L75 177C81 164 92 159 108 158L168 155L177 181L93 212Z" fill="url(#shoulder)" stroke="#aba1ba" stroke-opacity=".5"/>
+    <path d="M443 181L452 155L512 158C528 159 539 164 545 177L556 202L527 212Z" fill="url(#shoulder)" stroke="#aba1ba" stroke-opacity=".5"/>
+    <use href="#case" transform="translate(5 14)" fill="url(#edge)" stroke="#24202e" stroke-width="2"/>
+    <use href="#case" fill="url(#shell)" stroke="#a49aad" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M99 188C207 167 413 167 521 188" stroke="#b5a3d2" stroke-opacity=".3"/>
+    <path d="M46 295C39 348 53 390 83 416M574 295C581 348 567 390 537 416" stroke="#aca0bb" stroke-opacity=".12"/>
+    <g fill="#d6cbe3" fill-opacity=".6" font-family="monospace" font-size="10" font-weight="bold">
+      <text x="109" y="179">L</text><text x="505" y="179">R</text>
+    </g>
+
+    <!-- A central 3:2 LCD, with the original green battle-screen palette. -->
+    <path d="M195 193H425C439 193 449 204 448 222L443 398C443 417 429 430 411 430H209C191 430 177 417 177 398L172 222C171 204 181 193 195 193Z" fill="#191921" stroke="#727080" stroke-width="1.5"/>
+    <path d="M190 201H430" stroke="#c3b1d8" stroke-opacity=".25"/>
+    <rect x="187" y="214" width="246" height="169" rx="3" fill="#0d1b14"/>
+    <rect x="194" y="221" width="232" height="155" fill="url(#screen)"/>
+    <g fill="#294334" font-family="monospace" text-anchor="middle" font-weight="bold">
+      <text x="310" y="242" font-size="9" letter-spacing="2">RETRO POKE OFFLINE</text>
+      <text x="310" y="271" font-size="20" letter-spacing="1">READY TO</text>
+      <text x="310" y="296" font-size="26" letter-spacing="1.5">BATTLE?</text>
+      <text x="310" y="360" font-size="9" letter-spacing="1.5">PRESS START / 2027</text>
+    </g>
+    <g fill="#36583e" shape-rendering="crispEdges">
+      <path d="M224 319H229V314H239V319H244V324H249V339H244V344H224V339H219V324H224Z"/>
+      <path d="M234 306H239V316H234ZM219 311H224V321H219ZM249 334H254V344H249Z"/>
+      <path d="M374 324H384V319H389V324H399V329H404V339H399V344H374V339H369V329H374Z"/>
+      <path d="M374 309H379V324H374ZM394 309H399V324H394Z"/>
+    </g>
+    <g fill="#b4d295"><rect x="229" y="324" width="5" height="5"/><rect x="384" y="329" width="5" height="5"/></g>
+    <path d="M267 330H354" stroke="#36583e" stroke-dasharray="4 5"/>
+    <rect x="194" y="221" width="232" height="155" fill="url(#scan)"/>
+    <text x="310" y="412" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" font-style="italic" fill="#b8a4e2" letter-spacing="2">RPO ADVANCE</text>
+
+    <!-- Controls sit on either side of the screen, keeping the purple buttons. -->
+    <circle cx="106" cy="310" r="49" fill="#17171f" stroke="#62606e"/>
+    <path d="M94 273H118V298H143V322H118V347H94V322H69V298H94Z" fill="#101016" stroke="#53515d" stroke-width="2"/>
+    <circle cx="106" cy="310" r="9" fill="#202029"/>
+    <g transform="rotate(-25 512 308)">
+      <rect x="460" y="275" width="106" height="64" rx="32" fill="#17141e" stroke="#55505f"/>
+      <circle cx="489" cy="307" r="22" fill="url(#button)" stroke="#cfb0ed" stroke-opacity=".7"/>
+      <circle cx="538" cy="307" r="22" fill="url(#button)" stroke="#cfb0ed" stroke-opacity=".7"/>
+      <g fill="#3b2058" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold">
+        <text x="489" y="313">B</text><text x="538" y="313">A</text>
+      </g>
+    </g>
+    <circle cx="563" cy="242" r="4" fill="#b48bff"/>
+    <text x="553" y="229" font-family="monospace" font-size="6" fill="#aaa0b7">POWER</text>
+    <g fill="#111118" stroke="#57505f">
+      <rect x="111" y="383" width="35" height="9" rx="4.5"/>
+      <rect x="111" y="406" width="35" height="9" rx="4.5"/>
+    </g>
+    <g fill="#aaa2b5" font-family="monospace" font-size="7">
+      <text x="153" y="391">SELECT</text><text x="153" y="414">START</text>
+    </g>
+    <g stroke="#111118" stroke-width="5" stroke-linecap="round" transform="rotate(-15 509 399)">
+      <path d="M479 385V408M493 380V414M507 378V416M521 380V414M535 385V408"/>
+    </g>
+    <path d="M174 457C252 461 368 461 446 457" stroke="#8e7a9e" stroke-opacity=".2"/>
+    <circle cx="62" cy="250" r="2.5" fill="#18151f" stroke="#766a81" stroke-opacity=".6"/>
+    <circle cx="557" cy="412" r="2.5" fill="#18151f" stroke="#766a81" stroke-opacity=".6"/>
+  </g>
+</svg>
