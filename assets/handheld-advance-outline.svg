@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="700" viewBox="0 0 620 700" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">ゲームボーイアドバンス正面のラインアート</title>
+  <desc id="description">初代ゲームボーイアドバンスの外形と配置を参照した紫の線画。中央が高い上辺、丸く張り出した下辺、横長の画面、左の十字キーと2つの小ボタン、右のA・Bボタン。ラベルとスピーカー孔を省略したデザイン。</desc>
+  <!-- Flat line art. Reference: Nintendo AGB hardware diagram and iFixit front photo. -->
+  <g stroke="#b68aff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- AGB-001: approximately 144.5 : 82 overall front proportions. -->
+    <path d="M192 160H428C450 160 458 163 475 171C492 177 516 178 541 185C561 189 574 198 579 215C586 249 589 291 592 368C594 396 588 418 572 430C562 438 549 442 530 446L476 460C430 475 366 480 310 480C254 480 190 475 144 460L90 446C71 442 58 438 48 430C32 418 26 396 28 368C31 291 34 249 41 215C46 198 59 189 79 185C104 178 128 177 145 171C162 163 170 160 192 160Z" fill="#100d16" fill-opacity=".75" stroke-opacity=".95"/>
+    <!-- The shoulder buttons follow the upper corners; the centre bridge sits higher. -->
+    <path d="M42 213C43 206 48 203 60 200C104 194 128 187 149 175C159 170 174 169 193 169H427C446 169 461 170 471 175C492 187 516 194 560 200C572 203 577 206 578 213" stroke-opacity=".5"/>
+    <!-- Slightly bowed lens top and broad curved lens bottom, as on the original model. -->
+    <path d="M190 206C250 199 370 199 430 206C446 208 453 217 454 232L461 401C462 423 454 436 433 442C352 460 268 460 187 442C166 436 158 425 159 403L165 232C166 217 174 208 190 206Z" stroke-opacity=".72"/>
+    <!-- The LCD aperture retains its original 3:2 aspect ratio. -->
+    <rect x="185" y="231" width="250" height="166.667" rx="1.5" fill="#b68aff" fill-opacity=".035" stroke-opacity=".9"/>
+    <rect x="275" y="182" width="70" height="16" rx="8" stroke-width="1.2" stroke-opacity=".38"/>
+    <!-- D-pad with rounded moulded corners, and the smaller diagonal A/B pair. -->
+    <path d="M90 265H110Q112 265 112 267V289H135Q137 289 137 291V311Q137 313 135 313H112V336Q112 338 110 338H90Q88 338 88 336V313H65Q63 313 63 311V291Q63 289 65 289H88V267Q88 265 90 265Z" stroke-opacity=".95"/>
+    <circle cx="100" cy="301.5" r="4" stroke-width="1.2" stroke-opacity=".35"/>
+    <path d="M96 276L100 272L104 276M96 328L100 332L104 328M74 297.5L70 301.5L74 305.5M126 297.5L130 301.5L126 305.5" stroke-width="1.2" stroke-opacity=".35"/>
+    <circle cx="492" cy="312" r="18" stroke-opacity=".95"/>
+    <circle cx="544" cy="294" r="18" stroke-opacity=".95"/>
+    <!-- Unlabelled round rubber buttons and their surrounding recesses. -->
+    <g transform="rotate(12 118 378)">
+      <rect x="87" y="368" width="64" height="20" rx="10" stroke-width="1.2" stroke-opacity=".3"/>
+      <circle cx="141" cy="378" r="8" stroke-width="1.8" stroke-opacity=".9"/>
+    </g>
+    <g transform="rotate(12 118 409)">
+      <rect x="87" y="399" width="64" height="20" rx="10" stroke-width="1.2" stroke-opacity=".3"/>
+      <circle cx="141" cy="409" r="8" stroke-width="1.8" stroke-opacity=".9"/>
+    </g>
+    <circle cx="493" cy="224" r="5" stroke-width="1.5" stroke-opacity=".8"/>
+    <circle cx="493" cy="224" r="2.2" fill="#b68aff" fill-opacity=".8" stroke="none"/>
+    <path d="M218 339H402" stroke-width="1" stroke-opacity=".3"/>
+  </g>
+  <g fill="#c9a8f4" font-family="monospace" text-anchor="middle">
+    <text x="310" y="258" font-size="8" letter-spacing="2.2" fill-opacity=".65">RETRO POKE OFFLINE</text>
+    <text x="310" y="289" font-size="20" letter-spacing="2">READY TO</text>
+    <text x="310" y="316" font-size="25" letter-spacing="2.2">BATTLE?</text>
+    <text x="310" y="366" font-size="8" letter-spacing="1.7" fill-opacity=".65">2027</text>
+    <text x="492" y="317" font-size="15">B</text>
+    <text x="544" y="299" font-size="15">A</text>
+  </g>
+</svg>
