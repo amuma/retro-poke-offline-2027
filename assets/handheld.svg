@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="700" viewBox="0 0 620 700" fill="none">
+  <defs>
+    <linearGradient id="shell" x1="110" y1="25" x2="500" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#76728b"/><stop offset=".22" stop-color="#444252"/><stop offset=".65" stop-color="#24232e"/><stop offset="1" stop-color="#191821"/></linearGradient>
+    <linearGradient id="edge" x1="520" y1="160" x2="470" y2="670" gradientUnits="userSpaceOnUse"><stop stop-color="#9b91af"/><stop offset="1" stop-color="#2c263a"/></linearGradient>
+    <linearGradient id="screen" x1="170" y1="140" x2="440" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#c5dfa5"/><stop offset="1" stop-color="#85a67d"/></linearGradient>
+    <linearGradient id="button" x1="410" y1="430" x2="470" y2="510"><stop stop-color="#c184f4"/><stop offset="1" stop-color="#7742ba"/></linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#233d30" stroke-opacity=".15"/></pattern>
+    <filter id="shadow" x="-40%" y="-20%" width="180%" height="160%"><feDropShadow dx="8" dy="25" stdDeviation="18" flood-color="#000" flood-opacity=".7"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M137 43H465C489 43 506 61 506 85V554C506 612 463 655 405 655H144C121 655 105 639 105 615V82C105 58 117 43 137 43Z" fill="url(#edge)"/>
+    <path d="M126 29H452C477 29 493 46 493 73V543C493 600 454 641 395 641H131C108 641 92 624 92 601V69C92 44 104 29 126 29Z" fill="url(#shell)" stroke="#a49aad" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M104 85H481" stroke="#b5a3d2" stroke-opacity=".2"/>
+    <path d="M109 106H475V357C475 382 457 399 432 399H136C117 399 109 388 109 369V106Z" fill="#191921" stroke="#727080"/>
+    <path d="M116 113H468" stroke="#c3b1d8" stroke-opacity=".3"/>
+    <rect x="161" y="137" width="271" height="223" rx="3" fill="#0d1b14"/>
+    <rect x="168" y="144" width="257" height="209" fill="url(#screen)"/>
+    <g fill="#294334" font-family="monospace" text-anchor="middle" font-weight="bold">
+      <text x="296" y="180" font-size="12" letter-spacing="3">RETRO POKE OFFLINE</text>
+      <text x="296" y="221" font-size="25" letter-spacing="1">READY TO</text>
+      <text x="296" y="250" font-size="30" letter-spacing="2">BATTLE?</text>
+      <text x="296" y="324" font-size="12" letter-spacing="2">PRESS START / 2027</text>
+    </g>
+    <g fill="#36583e" shape-rendering="crispEdges"><path d="M200 278H206V272H218V278H224V284H230V302H224V308H200V302H194V284H200Z"/><path d="M211 263H217V275H211ZM194 269H200V282H194ZM230 294H236V306H230Z"/><path d="M372 282H384V276H390V282H402V288H408V300H402V306H372V300H366V288H372Z"/><path d="M372 266H378V282H372ZM396 266H402V282H396Z"/></g>
+    <g fill="#b4d295"><rect x="206" y="284" width="6" height="6"/><rect x="384" y="288" width="6" height="6"/></g>
+    <path d="M248 289H341" stroke="#36583e" stroke-dasharray="4 5"/>
+    <rect x="168" y="144" width="257" height="209" fill="url(#scan)"/>
+    <circle cx="132" cy="197" r="4" fill="#b48bff"/><text x="120" y="219" font-family="monospace" font-size="7" fill="#a29aaa">POWER</text>
+    <text x="164" y="381" font-family="monospace" font-size="10" fill="#aca4bc" letter-spacing="1.5">DOT MATRIX WITH STEREO SOUND</text>
+    <text x="119" y="429" font-family="sans-serif" font-size="12" font-weight="bold" font-style="italic" fill="#b8a4e2" letter-spacing="2">RPO BATTLE SYSTEM</text>
+    <circle cx="174" cy="498" r="52" fill="#17171f" stroke="#62606e"/>
+    <path d="M160 460H188V484H212V512H188V536H160V512H136V484H160Z" fill="#101016" stroke="#53515d" stroke-width="2"/>
+    <circle cx="174" cy="498" r="10" fill="#202029"/>
+    <g transform="rotate(-25 411 492)"><rect x="356" y="454" width="116" height="65" rx="32" fill="#17141e" stroke="#55505f"/><circle cx="387" cy="486" r="23" fill="url(#button)" stroke="#cfb0ed" stroke-opacity=".7"/><circle cx="443" cy="486" r="23" fill="url(#button)" stroke="#cfb0ed" stroke-opacity=".7"/><text x="386" y="493" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#3b2058">B</text><text x="443" y="493" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#3b2058">A</text></g>
+    <g transform="rotate(-25 280 575)"><rect x="224" y="560" width="43" height="10" rx="5" fill="#111118" stroke="#57505f"/><rect x="285" y="560" width="43" height="10" rx="5" fill="#111118" stroke="#57505f"/><text x="246" y="585" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa2b5">SELECT</text><text x="306" y="585" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa2b5">START</text></g>
+    <g stroke="#111118" stroke-width="6" stroke-linecap="round" transform="rotate(-25 416 584)"><path d="M385 563V595M399 563V600M413 563V600M427 563V600M441 563V595"/></g>
+    <path d="M108 608C170 610 310 613 381 610" stroke="#8e7a9e" stroke-opacity=".13"/>
+  </g>
+</svg>

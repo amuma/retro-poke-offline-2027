@@ -1,0 +1,7 @@
+{
+  "name": "retro-poke-offline-2027",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RETRO Poke OFFLINE 2027 four-page static prototype",
+  "scripts": { "dev": "node scripts/serve.mjs", "check": "node scripts/check.mjs" }
+}
