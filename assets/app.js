@@ -109,8 +109,8 @@
       const tag = target ? 'a' : 'article';
       const attributes = target ? ` href="${escape(target)}" target="_blank" rel="noopener noreferrer"` : '';
       const avatar = youtube && item.icon ? `<img class="meetup-channel-icon" src="${escape(url(item.icon))}" width="56" height="56" alt="" loading="lazy" decoding="async">` : articleIcon;
-      const action = target ? `${youtube ? 'チャンネルを見る' : '記事を読む'}<span class="visually-hidden">（新しいタブで開きます）</span>` : 'リンク準備中';
-      return `<${tag} class="meetup-link-card${target ? '' : ' is-placeholder'}"${attributes}><div class="meetup-card-top">${avatar}<div><span class="meetup-link-type ${youtube ? 'youtube' : 'blog'}">${youtube ? 'YouTube CHANNEL' : 'BLOG ARTICLE'}</span><p class="meetup-card-organizer">${escape(item.organizer)}</p></div></div><h3>${escape(item.title)}</h3><p class="meetup-card-description">${escape(item.description)}</p><div class="meetup-card-bottom"><span>${action}</span>${target ? '' : '<span class="meetup-sample-label">SAMPLE</span>'}</div></${tag}>`;
+      const action = target ? `${escape(item.linkLabel || (youtube ? 'チャンネルを見る' : '記事を読む'))}<span class="visually-hidden">（新しいタブで開きます）</span>` : 'リンク準備中';
+      return `<${tag} class="meetup-link-card${target ? '' : ' is-placeholder'}"${attributes}><div class="meetup-card-top">${avatar}<div><span class="meetup-link-type ${youtube ? 'youtube' : 'blog'}">${youtube ? 'YouTube CHANNEL' : 'BLOG'}</span><p class="meetup-card-organizer">${escape(item.organizer)}</p></div></div><h3>${escape(item.title)}</h3><p class="meetup-card-description">${escape(item.description)}</p><div class="meetup-card-bottom"><span>${action}</span>${item.sample || !target ? '<span class="meetup-sample-label">SAMPLE</span>' : ''}</div></${tag}>`;
     }).join('');
   }
   if (page === 'guidelines' && $('#calcCount') && $('#calcRank')) {

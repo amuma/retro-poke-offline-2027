@@ -1,4 +1,4 @@
-/* All records in this prototype are fictional. No personal data is included. */
+/* Tournament records are fictional. Meetup link examples point to public sites. */
 (() => {
   const formats = [
     { id: 'gsc', name: '一撃なし金銀', short: 'GSC', color: '#d6be70', pool: ['カビゴン','サンダー','パルシェン','ゲンガー','スイクン','ガラガラ','ナッシー','ライコウ','カイリキー','ブラッキー','ハガネール','ヘラクロス'] },
@@ -23,27 +23,17 @@
     { id: 'osaka-02', name: '関西レトロオフ #02', city: 'OSAKA', place: '大阪府内・サンプル会場', date: '2027.02.21', iso: '2027-02-21', count: 32, host: '関西レトロオフ運営（架空）', edition: '02', seed: 2 },
     { id: 'tokyo-01', name: '東京レトロオフ #01', city: 'TOKYO', place: '東京都内・サンプル会場', date: '2027.01.24', iso: '2027-01-24', count: 64, host: '東京レトロオフ運営（架空）', edition: '01', seed: 1 }
   ];
-  // Replace sample names/icons and set url to publish each external link card.
+  // Public links supplied as examples; sample marks the cards as listing examples.
   const meetupLinks = [
     {
-      type: 'youtube', organizer: '東京レトロオフ', title: '東京レトロオフ チャンネル',
-      description: '各世代の対戦配信や決勝戦アーカイブを紹介するチャンネルの掲載イメージです。',
-      icon: 'assets/channels/tokyo-sample.svg', url: null
+      type: 'youtube', organizer: '@hamuchichi', title: '半額のムチュールチャンネル',
+      description: '後期シングルや05ダブルなど、GBA対戦会の対戦動画を公開するYouTubeチャンネル。',
+      icon: 'assets/channels/hamuchichi.jpg', url: 'https://www.youtube.com/@hamuchichi', sample: true
     },
     {
-      type: 'youtube', organizer: '関西レトロオフ', title: '関西レトロオフ チャンネル',
-      description: 'オフ会の対戦動画やイベントの様子を届けるチャンネルの掲載イメージです。',
-      icon: 'assets/channels/kansai-sample.svg', url: null
-    },
-    {
-      type: 'blog', organizer: '東京レトロオフ', title: '東京レトロオフ 開催レポート',
-      description: '当日の様子や対戦の振り返りをまとめた、主催者ブログ記事の掲載イメージです。',
-      url: null
-    },
-    {
-      type: 'blog', organizer: '関西レトロオフ', title: '関西レトロオフ 参加ガイド',
-      description: '会場案内や持ち物、初めて参加する方向けのブログ記事の掲載イメージです。',
-      url: null
+      type: 'blog', organizer: 'ampeanuts.hatenablog.com', title: 'mmm spot',
+      description: 'ポケモン過去作やゲーム機の情報、対戦・配信向けツールなどを紹介するブログ。',
+      url: 'https://ampeanuts.hatenablog.com/', linkLabel: 'ブログを見る', sample: true
     }
   ];
   const names = ['アオイ','くろねこ','ハル','ミナト','あずき','ソラ','ナギ','ユウ','カエデ','シオン','ライム','モカ','フウ','れん','ヒナタ','つばさ','コハク','マシロ','リク','いと','ツキ','セナ','スミレ','サク'];
