@@ -1,11 +1,293 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09090c"><meta name="description" content="予選ポイント制度、KPの集計方法、参加ガイドラインの検討用サンプル。参加人数と順位からポイントを試算できます。"><title>ガイドライン・ポイント制度｜RETRO Poke OFFLINE 2027</title><link rel="icon" href="../assets/logo.png" type="image/png"><link rel="stylesheet" href="../assets/styles.css"><script defer src="../assets/data.js"></script><script defer src="../assets/app.js"></script></head>
-<body data-page="guidelines"><a class="skip" href="#main">本文へ移動</a><div id="siteHeader"></div><noscript><p class="noscript">ポイント計算機の利用にはJavaScriptを有効にしてください。</p></noscript><main id="main">
-<section class="page-hero"><div class="wrap"><div class="breadcrumb"><a href="../">TOP</a><span aria-hidden="true">/</span><span>GUIDELINES & POINTS</span></div><p class="eyebrow">PLAY FAIR. KEEP THE FIRE.</p><h1 class="display">GUIDELINES<br><span class="accent">& POINTS</span></h1><p class="page-desc">大会を楽しむために、参加前に知っておきたいこと。<br>予選の仕組み、ポイントの数え方、対戦と記録のガイドライン。</p></div></section>
-<div class="section wrap guide-layout"><nav class="guide-nav" aria-label="このページの目次"><p class="eyebrow">ON THIS PAGE</p><a href="#season">予選シーズンについて</a><a href="#points">ポイント制度</a><a href="#calculator">ポイント計算サンプル</a><a href="#kp">KPの集計方法</a><a href="#participation">参加ガイドライン</a><a href="#faq">よくあるご質問</a></nav><div>
-<section id="season" class="guide-section"><p class="eyebrow">THE QUALIFYING SEASON</p><h2>各地の対戦を、ひとつのシーズンに。</h2><p>予選オフ会の大会順位に応じてポイントを獲得し、シーズンを通した成績をランキングに掲載する方式を想定しています。複数部門を開催するオフ会では、大会結果を部門ごとに管理します。</p><div class="notice"><strong>このページは、制度を検討するためのサンプルです。</strong><br>以下の配点・人数区分・同点処理は仮の設定です。対象期間、本戦出場枠、部門横断集計の採否、成績の採用大会数、正式レギュレーションは未決定です。</div><p>対象となる対戦ルールは、一撃なし金銀、後期シングル、4thGS、BW2シングルです。後期シングルの対象ソフトを含む詳細規定は、正式公開時に明記します。</p></section>
-<section id="points" class="guide-section"><p class="eyebrow">POINT SYSTEM / DRAFT</p><h2>順位と大会規模に応じてポイントを獲得。</h2><p>サンプルでは、各部門の最終順位に応じた基礎ポイントに、実参加人数による規模係数を掛けています。</p><div class="formula"><span>順位別の基礎pt</span><span class="times">×</span><span>大会規模係数</span><span class="times">＝</span><strong>獲得ポイント</strong></div><h3>順位別の基礎ポイント（仮）</h3><div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">最終順位</th><th scope="col" class="num">基礎ポイント</th></tr></thead><tbody><tr><td>優勝</td><td class="num accent">100 pt</td></tr><tr><td>準優勝</td><td class="num">75 pt</td></tr><tr><td>3位</td><td class="num">60 pt</td></tr><tr><td>4位</td><td class="num">50 pt</td></tr><tr><td>5〜8位</td><td class="num">30 pt</td></tr><tr><td>9〜16位</td><td class="num">15 pt</td></tr><tr><td>17〜32位</td><td class="num">5 pt</td></tr><tr><td>33位以下</td><td class="num">0 pt</td></tr></tbody></table></div><h3>実参加人数による規模係数（仮）</h3><div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">クラス</th><th scope="col">各部門の実参加人数</th><th scope="col" class="num">係数</th></tr></thead><tbody><tr><td>C</td><td>2〜31人</td><td class="num">×0.75</td></tr><tr><td>B</td><td>32〜63人</td><td class="num">×1.00</td></tr><tr><td>A</td><td>64〜95人</td><td class="num">×1.25</td></tr><tr><td>S</td><td>96人以上</td><td class="num accent">×1.50</td></tr></tbody></table></div><ul class="guide-list"><li>人数は、その部門で実際に対戦へ参加した人数を使用する案です。見学者と欠席者は含めません。</li><li>サンプルの端数は小数点以下切り捨てです。例：64人大会の準優勝は、75 × 1.25 ＝ 93 pt。</li><li>サンプルでは全3大会を合算します。同点時は優勝回数、3位以内の回数で比較し、すべて同じ場合は同順位です。</li><li>大会内の同順位への配点、辞退・失格の扱い、ポイント訂正手順は、正式制度で別途定めます。</li></ul><div id="calculator" class="calculator"><p class="eyebrow">TRY THE POINT CALCULATOR</p><h3 style="margin:0">獲得ポイントを試算する</h3><p class="muted" style="font-size:.8125rem;margin-top:8px">仮の配点表を使った計算サンプルです。</p><div class="calc-fields"><div class="field"><label for="calcCount">部門の実参加人数</label><input id="calcCount" type="number" min="2" max="512" step="1" value="64" inputmode="numeric" aria-describedby="calcDetail"></div><div class="field"><label for="calcRank">最終順位</label><select id="calcRank"><option value="1">優勝</option><option value="2">準優勝</option><option value="3">3位</option><option value="4">4位</option><option value="5">5〜8位</option><option value="9">9〜16位</option><option value="17">17〜32位</option><option value="33">33位以下</option></select></div></div><div class="calc-result" aria-live="polite"><p id="calcDetail" class="calc-detail"></p><p class="calc-number"><output id="calcNumber" for="calcCount calcRank">125</output><small>pt</small></p></div></div></section>
-<section id="kp" class="guide-section"><p class="eyebrow">POKÉMON USAGE</p><h2>KPは、集計の条件まで記録する。</h2><p>KPは、各部門の登録パーティに採用されたポケモンの人数を集計するものとして掲載します。大会参加者数と有効なパーティ提出人数を併記し、どの範囲のデータかが分かるようにします。</p><div class="formula"><span>採用人数 ÷ 有効提出人数 × 100</span><strong>＝ 採用率（%）</strong></div><ul class="guide-list"><li>登録された6匹を対象とし、対戦中の選出率とは分けます。</li><li>複数部門がある場合は、それぞれ個別に集計します。</li><li>未提出・無効なデータがあれば、有効提出人数と収集率を明記します。</li><li>フォルム違い等の集計単位は、正式な集計規定で統一します。</li></ul><div class="notice">KP収集を公認予選の条件にするか、ポイント補正の条件にするかは検討中です。このサンプルの大会データは収集率100%として表示しています。</div></section>
-<section id="participation" class="guide-section"><p class="eyebrow">COMMUNITY GUIDELINES / DRAFT</p><h2>対戦相手にも、運営にも、リスペクトを。</h2><p>参加ガイドラインの掲載内容案です。実際の参加条件は、各オフ会の正式な募集要項・レギュレーションを確認できる形で公開します。</p><ul class="guide-list"><li><strong>参加・キャンセル：</strong>申し込み先、受付時間、持参物、キャンセル連絡先を各オフ会の案内に掲載します。</li><li><strong>対戦マナー：</strong>対戦相手への敬意を持ち、迷惑行為や進行の妨げになる行為を控える方針です。</li><li><strong>機材・通信トラブル：</strong>問題が起きた場合の報告先と、再試合・裁定の手順を部門ごとに定めます。</li><li><strong>撮影・配信：</strong>撮影範囲、顔出しの扱い、配信卓への参加条件を事前に案内します。</li><li><strong>結果・パーティの掲載：</strong>ハンドルネーム、順位、ポイント、パーティの掲載範囲と公開時期を事前に案内します。</li><li><strong>訂正依頼：</strong>結果や名前の誤りを専用Xへ連絡できるようにし、確認後にポイントと順位を再集計します。</li></ul></section>
-<section id="faq" class="guide-section"><p class="eyebrow">FAQ</p><h2>よくあるご質問</h2><div class="faq"><details><summary>複数の予選オフ会に参加できますか？</summary><p>複数大会の成績を集計する方式を想定しています。有効な大会数に上限を設けるかは、正式なポイント制度で決定します。</p></details><details><summary>部門ごとのランキングは見られますか？</summary><p>ランキングページ上部の部門ボタンから切り替えられます。総合は表示サンプルであり、正式な本戦選考に使うかは未決定です。</p></details><details><summary>このサンプルから申し込みできますか？</summary><p>現在はデザイン確認用です。実際の開催・募集情報と参加申し込み先は、決定後に掲載します。</p></details></div></section>
-</div></div></main><div id="siteFooter"></div></body></html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090c">
+    <meta
+      name="description"
+      content="予選ポイント制度、KPの集計方法、参加ガイドラインの検討用サンプル。参加人数と順位からポイントを試算できます。"
+    >
+
+    <title>ガイドライン・ポイント制度｜RETRO Poke OFFLINE 2027</title>
+
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <script defer src="../assets/data.js"></script>
+    <script defer src="../assets/app.js"></script>
+  </head>
+
+  <body data-page="guidelines">
+    <a class="skip" href="#main">本文へ移動</a>
+    <div id="siteHeader"></div>
+
+    <noscript>
+      <p class="noscript">
+        ポイント計算機の利用にはJavaScriptを有効にしてください。
+      </p>
+    </noscript>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="wrap">
+          <div class="breadcrumb">
+            <a href="../">TOP</a>
+            <span aria-hidden="true">/</span>
+            <span>GUIDELINES &amp; POINTS</span>
+          </div>
+
+          <p class="eyebrow">PLAY FAIR. KEEP THE FIRE.</p>
+          <h1 class="display">
+            GUIDELINES<br>
+            <span class="accent">&amp; POINTS</span>
+          </h1>
+          <p class="page-desc">
+            大会を楽しむために、参加前に知っておきたいこと。<br>
+            予選の仕組み、ポイントの数え方、対戦と記録のガイドライン。
+          </p>
+        </div>
+      </section>
+
+      <div class="section wrap guide-layout">
+        <nav class="guide-nav" aria-label="このページの目次">
+          <p class="eyebrow">ON THIS PAGE</p>
+          <a href="#season">予選シーズンについて</a>
+          <a href="#points">ポイント制度</a>
+          <a href="#calculator">ポイント計算サンプル</a>
+          <a href="#kp">KPの集計方法</a>
+          <a href="#participation">参加ガイドライン</a>
+          <a href="#faq">よくあるご質問</a>
+        </nav>
+
+        <div>
+          <section id="season" class="guide-section">
+            <p class="eyebrow">THE QUALIFYING SEASON</p>
+            <h2>この1年の、最強を決める。
+            </h2>
+            <p>
+              シーズンを2027年1月~12月と規定し、イベントに参加する各地対象の予選オフ会の大会順位に応じてポイントを獲得し、シーズンを通した成績をランキングに掲載する方式を想定しています。
+              複数部門を開催するオフ会では、大会結果を部門ごとに管理します。
+            </p>
+
+            <div class="notice">
+              <strong>このページは、制度を検討するためのサンプルです。</strong><br>
+              以下の配点・人数区分・同点処理は仮の設定です。対象期間、本戦出場枠、部門横断集計の採否、成績の採用大会数、正式レギュレーションは未決定です。
+            </div>
+
+            <p>
+              対象となる対戦ルールは、一撃なし金銀、後期シングル、4thGS、BW2シングルです。
+              対象ソフトを含む詳細規定は、正式公開時に明記します。
+            </p>
+          </section>
+
+          <section id="points" class="guide-section">
+            <p class="eyebrow">POINT SYSTEM / DRAFT</p>
+            <h2>順位と大会規模に応じてポイントを獲得。</h2>
+            <p>
+              サンプルでは、各部門の最終順位に応じた基礎ポイントに、実参加人数による規模係数を掛けています。
+            </p>
+
+            <div class="formula">
+              <span>順位別の基礎pt</span>
+              <span class="times">×</span>
+              <span>大会規模係数</span>
+              <span class="times">＝</span>
+              <strong>獲得ポイント</strong>
+            </div>
+
+            <h3>順位別の基礎ポイント（仮）</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">最終順位</th>
+                    <th scope="col" class="num">基礎ポイント</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>優勝</td>
+                    <td class="num accent">100 pt</td>
+                  </tr>
+                  <tr>
+                    <td>準優勝</td>
+                    <td class="num">75 pt</td>
+                  </tr>
+                  <tr>
+                    <td>3位</td>
+                    <td class="num">60 pt</td>
+                  </tr>
+                  <tr>
+                    <td>4位</td>
+                    <td class="num">50 pt</td>
+                  </tr>
+                  <tr>
+                    <td>5〜8位</td>
+                    <td class="num">30 pt</td>
+                  </tr>
+                  <tr>
+                    <td>9〜16位</td>
+                    <td class="num">15 pt</td>
+                  </tr>
+                  <tr>
+                    <td>17〜32位</td>
+                    <td class="num">5 pt</td>
+                  </tr>
+                  <tr>
+                    <td>33位以下</td>
+                    <td class="num">0 pt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>実参加人数による規模係数（仮）</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">クラス</th>
+                    <th scope="col">各部門の実参加人数</th>
+                    <th scope="col" class="num">係数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>C</td>
+                    <td>2〜31人</td>
+                    <td class="num">×0.75</td>
+                  </tr>
+                  <tr>
+                    <td>B</td>
+                    <td>32〜63人</td>
+                    <td class="num">×1.00</td>
+                  </tr>
+                  <tr>
+                    <td>A</td>
+                    <td>64〜95人</td>
+                    <td class="num">×1.25</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>96人以上</td>
+                    <td class="num accent">×1.50</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ul class="guide-list">
+              <li>
+                人数は、その部門で実際に対戦へ参加した人数を使用する案です。見学者と欠席者は含めません。
+              </li>
+              <li>
+                サンプルの端数は小数点以下切り捨てです。例：64人大会の準優勝は、75 × 1.25 ＝ 93 pt。
+              </li>
+              <li>
+                サンプルでは全3大会を合算します。同点時は優勝回数、3位以内の回数で比較し、すべて同じ場合は同順位です。
+              </li>
+              <li>
+                大会内の同順位への配点、辞退・失格の扱い、ポイント訂正手順は、正式制度で別途定めます。
+              </li>
+            </ul>
+
+          <section id="kp" class="guide-section">
+            <p class="eyebrow">POKÉMON USAGE</p>
+            <h2>各大会のデータと奇跡。磨かれるメタと戦略。</h2>
+            <p>
+              KPは、各部門の登録パーティに採用されたポケモンの人数を集計するものとして掲載します。
+              大会参加者数と有効なパーティ提出人数を併記し、どの範囲のデータかが分かるようにします。
+            </p>
+
+            <div class="formula">
+              <span>採用人数 ÷ 有効提出人数 × 100</span>
+              <strong>＝ 採用率（%）</strong>
+            </div>
+
+            <ul class="guide-list">
+              <li>登録された6匹を対象とし、対戦中の選出率とは分けます。</li>
+              <li>複数部門がある場合は、それぞれ個別に集計します。</li>
+              <li>未提出・無効なデータがあれば、有効提出人数と収集率を明記します。</li>
+              <li>フォルム違い等の集計単位は、正式な集計規定で統一します。</li>
+            </ul>
+
+            <div class="notice">
+              KP収集を公認予選の条件にするか、ポイント補正の条件にするかは検討中です。
+              このサンプルの大会データは収集率100%として表示しています。
+            </div>
+          </section>
+
+          <section id="participation" class="guide-section">
+            <p class="eyebrow">COMMUNITY GUIDELINES / DRAFT</p>
+            <h2>参加者全員で作り上げる、1年の軌跡。</h2>
+            <p>
+              参加ガイドラインの掲載内容案です。
+              実際の参加条件は、各オフ会の正式な募集要項・レギュレーションに準じます。
+            </p>
+
+            <ul class="guide-list">
+              <li>
+                <strong>参加・キャンセル：</strong>
+                申し込み先、受付時間、持参物、キャンセル連絡先を各オフ会の案内に掲載します。
+              </li>
+              <li>
+                <strong>対戦マナー：</strong>
+                対戦相手への敬意を持ち、迷惑行為や進行の妨げになる行為を控える方針です。
+              </li>
+              <li>
+                <strong>機材・通信トラブル：</strong>
+                問題が起きた場合の報告先と、再試合・裁定の手順を部門ごとに定めます。
+              </li>
+              <li>
+                <strong>撮影・配信：</strong>
+                撮影範囲、顔出しの扱い、配信卓への参加条件を事前に案内します。
+              </li>
+              <li>
+                <strong>結果・パーティの掲載：</strong>
+                ハンドルネーム、順位、ポイント、パーティの掲載範囲と公開時期を事前に案内します。
+              </li>
+              <li>
+                <strong>訂正依頼：</strong>
+                結果や名前の誤りを専用Xへ連絡できるようにし、確認後にポイントと順位を再集計します。
+              </li>
+            </ul>
+          </section>
+
+          <section id="faq" class="guide-section">
+            <p class="eyebrow">FAQ</p>
+            <h2>よくあるご質問</h2>
+
+            <div class="faq">
+              <details>
+                <summary>複数の予選オフ会に参加できますか？</summary>
+                <p>
+                  複数大会の成績を集計する方式を想定しています。
+                  有効な大会数に上限を設けるかは、正式なポイント制度で決定します。
+                </p>
+              </details>
+
+              <details>
+                <summary>部門ごとのランキングは見られますか？</summary>
+                <p>
+                  ランキングページ上部の部門ボタンから切り替えられます。
+                  総合は表示サンプルであり、正式な本戦選考に使うかは未決定です。
+                </p>
+              </details>
+
+              <details>
+                <summary>このサンプルから申し込みできますか？</summary>
+                <p>
+                  現在はデザイン確認用です。
+                  実際の開催・募集情報と参加申し込み先は、決定後に掲載します。
+                </p>
+              </details>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id="siteFooter"></div>
+  </body>
+</html>
