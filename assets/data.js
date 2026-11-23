@@ -23,6 +23,29 @@
     { id: 'osaka-02', name: '関西レトロオフ #02', city: 'OSAKA', place: '大阪府内・サンプル会場', date: '2027.02.21', iso: '2027-02-21', count: 32, host: '関西レトロオフ運営（架空）', edition: '02', seed: 2 },
     { id: 'tokyo-01', name: '東京レトロオフ #01', city: 'TOKYO', place: '東京都内・サンプル会場', date: '2027.01.24', iso: '2027-01-24', count: 64, host: '東京レトロオフ運営（架空）', edition: '01', seed: 1 }
   ];
+  // Replace sample names/icons and set url to publish each external link card.
+  const meetupLinks = [
+    {
+      type: 'youtube', organizer: '東京レトロオフ', title: '東京レトロオフ チャンネル',
+      description: '各世代の対戦配信や決勝戦アーカイブを紹介するチャンネルの掲載イメージです。',
+      icon: 'assets/channels/tokyo-sample.svg', url: null
+    },
+    {
+      type: 'youtube', organizer: '関西レトロオフ', title: '関西レトロオフ チャンネル',
+      description: 'オフ会の対戦動画やイベントの様子を届けるチャンネルの掲載イメージです。',
+      icon: 'assets/channels/kansai-sample.svg', url: null
+    },
+    {
+      type: 'blog', organizer: '東京レトロオフ', title: '東京レトロオフ 開催レポート',
+      description: '当日の様子や対戦の振り返りをまとめた、主催者ブログ記事の掲載イメージです。',
+      url: null
+    },
+    {
+      type: 'blog', organizer: '関西レトロオフ', title: '関西レトロオフ 参加ガイド',
+      description: '会場案内や持ち物、初めて参加する方向けのブログ記事の掲載イメージです。',
+      url: null
+    }
+  ];
   const names = ['アオイ','くろねこ','ハル','ミナト','あずき','ソラ','ナギ','ユウ','カエデ','シオン','ライム','モカ','フウ','れん','ヒナタ','つばさ','コハク','マシロ','リク','いと','ツキ','セナ','スミレ','サク'];
   const players = Array.from({ length: 96 }, (_, i) => ({ id: `p${String(i + 1).padStart(3, '0')}`, name: names[i] || `サンプル選手${String(i + 1).padStart(2, '0')}` }));
   const basePoints = rank => rank === 1 ? 100 : rank === 2 ? 75 : rank === 3 ? 60 : rank === 4 ? 50 : rank <= 8 ? 30 : rank <= 16 ? 15 : rank <= 32 ? 5 : 0;
@@ -50,5 +73,5 @@
     entries.forEach(r => r.party.forEach(name => counts.set(name, (counts.get(name) || 0) + 1)));
     return [...counts].map(([name, count]) => ({ name, count, percent: count / entries.length * 100 })).sort((a,b) => b.count - a.count || a.name.localeCompare(b.name, 'ja'));
   }
-  window.RPO = { formats, pokemonIds, events, players, results, basePoints, scale, points, ranking, kp };
+  window.RPO = { formats, pokemonIds, events, meetupLinks, players, results, basePoints, scale, points, ranking, kp };
 })();

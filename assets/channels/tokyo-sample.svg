@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" fill="none">
+  <title>東京レトロオフのサンプルチャンネルアイコン</title>
+  <rect width="112" height="112" rx="56" fill="#39224f"/>
+  <path d="M30 29H42V41H54V53H42V65H30V53H18V41H30V29Z" fill="#c9a2fb"/>
+  <circle cx="79" cy="37" r="9" fill="#f0a9bc"/>
+  <circle cx="68" cy="59" r="7" stroke="#f0a9bc" stroke-width="3"/>
+  <text x="56" y="89" fill="#eadcf9" font-family="Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">TOKYO</text>
+</svg>

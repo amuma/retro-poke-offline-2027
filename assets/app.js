@@ -100,6 +100,19 @@
     $('#eventSelect').addEventListener('change', event => { eventId = event.target.value; render(); });
     render();
   }
+  if (page === 'guidelines' && $('#meetupLinks')) {
+    const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    const articleIcon = '<span class="meetup-blog-icon" aria-hidden="true"><svg width="30" height="34" viewBox="0 0 30 34" fill="none"><path d="M7 2H19L27 10V30C27 31 26 32 25 32H5C4 32 3 31 3 30V4C3 3 4 2 5 2H7ZM19 2V10H27M9 16H21M9 22H21M9 27H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+    $('#meetupLinks').innerHTML = D.meetupLinks.map(item => {
+      const youtube = item.type === 'youtube';
+      const target = item.url && /^https?:\/\//i.test(item.url) ? item.url : null;
+      const tag = target ? 'a' : 'article';
+      const attributes = target ? ` href="${escape(target)}" target="_blank" rel="noopener noreferrer"` : '';
+      const avatar = youtube && item.icon ? `<img class="meetup-channel-icon" src="${escape(url(item.icon))}" width="56" height="56" alt="" loading="lazy" decoding="async">` : articleIcon;
+      const action = target ? `${youtube ? 'チャンネルを見る' : '記事を読む'}<span class="visually-hidden">（新しいタブで開きます）</span>` : 'リンク準備中';
+      return `<${tag} class="meetup-link-card${target ? '' : ' is-placeholder'}"${attributes}><div class="meetup-card-top">${avatar}<div><span class="meetup-link-type ${youtube ? 'youtube' : 'blog'}">${youtube ? 'YouTube CHANNEL' : 'BLOG ARTICLE'}</span><p class="meetup-card-organizer">${escape(item.organizer)}</p></div></div><h3>${escape(item.title)}</h3><p class="meetup-card-description">${escape(item.description)}</p><div class="meetup-card-bottom"><span>${action}</span>${target ? '' : '<span class="meetup-sample-label">SAMPLE</span>'}</div></${tag}>`;
+    }).join('');
+  }
   if (page === 'guidelines' && $('#calcCount') && $('#calcRank')) {
     const count = $('#calcCount'), rank = $('#calcRank');
     const calculate = () => {
