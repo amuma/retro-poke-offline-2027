@@ -71,7 +71,12 @@
     let formatId = D.formats.some(f => f.id === params.get('format')) ? params.get('format') : D.formats[0].id;
     $('#eventSelect').innerHTML = D.events.map(e => `<option value="${e.id}">${e.date}　${e.name}</option>`).join('');
     $('#eventSelect').value = eventId;
-    const partyMarkup = party => party.map(name => `<span class="party-mon">${name}</span>`).join('');
+    const pokemonMarkup = name => {
+      const id = D.pokemonIds[name];
+      const icon = id ? `<img class="pokemon-icon" src="${url(`assets/pokemon/${id}.png`)}" width="32" height="32" alt="" aria-hidden="true" loading="lazy" decoding="async">` : '';
+      return `<span class="pokemon-name">${icon}<span>${name}</span></span>`;
+    };
+    const partyMarkup = party => party.map(name => `<span class="party-mon">${pokemonMarkup(name)}</span>`).join('');
     function render() {
       const event = D.events.find(e => e.id === eventId), format = D.formats.find(f => f.id === formatId);
       const entries = D.results.filter(r => r.eventId === eventId && r.formatId === formatId);
@@ -89,13 +94,13 @@
       $('#resultCount').textContent = `${format.name} / ${entries.length}名`;
       $('#eventResults').innerHTML = entries.map(entry => `<tr><td class="rank-cell ${entry.rank <= 3 ? 'rank-top' : ''}">${String(entry.rank).padStart(2,'0')}</td><td>${D.players.find(p => p.id === entry.playerId).name}</td><td class="num"><span class="points-cell">${entry.points}<small>pt</small></span></td></tr>`).join('');
       $('#kpCoverage').textContent = `${entries.length} / ${entries.length}名・収集率100%`;
-      $('#kpRows').innerHTML = D.kp(eventId, formatId).map((row,i) => `<div class="kp-row"><span class="kp-rank">${String(i+1).padStart(2,'0')}</span><div>${row.name}<div class="kp-bar" aria-hidden="true"><span style="width:${row.percent.toFixed(1)}%"></span></div></div><div class="kp-count"><strong>${row.percent.toFixed(1)}%</strong>${row.count} / ${entries.length}名</div></div>`).join('');
+      $('#kpRows').innerHTML = D.kp(eventId, formatId).map((row,i) => `<div class="kp-row"><span class="kp-rank">${String(i+1).padStart(2,'0')}</span><div class="kp-pokemon">${pokemonMarkup(row.name)}<div class="kp-bar" aria-hidden="true"><span style="width:${row.percent.toFixed(1)}%"></span></div></div><div class="kp-count"><strong>${row.percent.toFixed(1)}%</strong>${row.count} / ${entries.length}名</div></div>`).join('');
       const next = new URL(location.href); next.searchParams.set('event', eventId); next.searchParams.set('format', formatId); history.replaceState(null,'',next);
     }
     $('#eventSelect').addEventListener('change', event => { eventId = event.target.value; render(); });
     render();
   }
-  if (page === 'guidelines') {
+  if (page === 'guidelines' && $('#calcCount') && $('#calcRank')) {
     const count = $('#calcCount'), rank = $('#calcRank');
     const calculate = () => {
       const n = Number(count.value), r = Number(rank.value);

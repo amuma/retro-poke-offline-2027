@@ -6,6 +6,18 @@
     { id: 'gs', name: '4thGS', short: '4TH GS', color: '#8bb9d7', pool: ['カイオーガ','ディアルガ','ルンパッパ','メタグロス','パルキア','グラードン','ユキノオー','ギラティナ','クレセリア','カポエラー','ドーブル','ホウオウ'] },
     { id: 'bw', name: 'BW2シングル', short: 'BW2', color: '#9fceae', pool: ['バンギラス','ガブリアス','クレセリア','ヒードラン','ローブシン','ボルトロス','ラティオス','ハッサム','キノガッサ','スイクン','カイリュー','ウルガモス'] }
   ];
+  const pokemonIds = Object.freeze({
+    'カビゴン': 143, 'サンダー': 145, 'パルシェン': 91, 'ゲンガー': 94,
+    'スイクン': 245, 'ガラガラ': 105, 'ナッシー': 103, 'ライコウ': 243,
+    'カイリキー': 68, 'ブラッキー': 197, 'ハガネール': 208, 'ヘラクロス': 214,
+    'メタグロス': 376, 'ボーマンダ': 373, 'ラティオス': 381, 'ミロカロス': 350,
+    'ラグラージ': 260, 'ハピナス': 242, 'バンギラス': 248, 'カイオーガ': 382,
+    'ディアルガ': 483, 'ルンパッパ': 272, 'パルキア': 484, 'グラードン': 383,
+    'ユキノオー': 460, 'ギラティナ': 487, 'クレセリア': 488, 'カポエラー': 237,
+    'ドーブル': 235, 'ホウオウ': 250, 'ガブリアス': 445, 'ヒードラン': 485,
+    'ローブシン': 534, 'ボルトロス': 642, 'ハッサム': 212, 'キノガッサ': 286,
+    'カイリュー': 149, 'ウルガモス': 637
+  });
   const events = [
     { id: 'tokyo-03', name: '東京レトロオフ #03', city: 'TOKYO', place: '東京都内・サンプル会場', date: '2027.03.21', iso: '2027-03-21', count: 96, host: '東京レトロオフ運営（架空）', edition: '03', seed: 3 },
     { id: 'osaka-02', name: '関西レトロオフ #02', city: 'OSAKA', place: '大阪府内・サンプル会場', date: '2027.02.21', iso: '2027-02-21', count: 32, host: '関西レトロオフ運営（架空）', edition: '02', seed: 2 },
@@ -38,5 +50,5 @@
     entries.forEach(r => r.party.forEach(name => counts.set(name, (counts.get(name) || 0) + 1)));
     return [...counts].map(([name, count]) => ({ name, count, percent: count / entries.length * 100 })).sort((a,b) => b.count - a.count || a.name.localeCompare(b.name, 'ja'));
   }
-  window.RPO = { formats, events, players, results, basePoints, scale, points, ranking, kp };
+  window.RPO = { formats, pokemonIds, events, players, results, basePoints, scale, points, ranking, kp };
 })();
